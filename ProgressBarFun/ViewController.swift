@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var progressBarView: ProgressBarView!
+    @IBOutlet weak var slider: UISlider!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +24,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sliderMoved(_ sender: UISlider) {
+        progressBarView.progress = CGFloat(slider.value)
+    }
 
 }
 
